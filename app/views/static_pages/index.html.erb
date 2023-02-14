@@ -1,3 +1,14 @@
 <h1>The Gossip Site !</h1>
 <%# <p>Find me in app/views/static_pages/index.html.erb</p> %>
 <h1> Le site de news des familles ! </h1>
+
+
+
+<%# la boucle pour afficher les potins sur lapage d'acceuil %>
+
+<% Gossip.all.each do |gossip| %>
+<article>
+   <p><mark><%= gossip.user.first_name %></mark></p>
+   <p><b><%= gossip.title %></b></p>
+</article>
+<% end %>
