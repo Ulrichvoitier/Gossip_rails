@@ -8,8 +8,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%# <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> %>
+    <%# stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+     <title>Jumbotron Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
   </head>
 
   <body>
@@ -29,7 +39,15 @@
         </div>
       </div>
     </nav>
-      
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">The Gossip Site !</h1>
+          <p>Le site de news des familles ! </p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Editer gossip &raquo;</a></p>
+        </div>
+      </div>
 
   </header>
 

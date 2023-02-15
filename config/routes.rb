@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get '/contact', to:'contact#contact_section'
   get '/welcome/:id', to: 'welcome#welcome_user'
 
+  #afficher un potin par page
+  get "/gossips/:id", to: "gossips#show"
+  get "/city/:id", to: "city#show"
+
   # get 'gossip#index'
   # get '/gossips/:id', to:'gossips#gossips_new'
   # get '/gossips/:id', to:'gossips#create'

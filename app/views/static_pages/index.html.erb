@@ -1,14 +1,53 @@
-<h1>The Gossip Site !</h1>
+<h1></h1>
 <%# <p>Find me in app/views/static_pages/index.html.erb</p> %>
-<h1> Le site de news des familles ! </h1>
+<br>
+<br>
+<h1> Les derniers gossip :</h1>
+<br>
+<br>
+
+<div class="container">
+        <!-- Example row of columns -->
+   <div class="row row-cols-1 row-cols-md-3 g-4">
+      <%Gossip.all.each do|gossip|%>
+          <div class="col">
+            <div class="card">
+               <div class="card shadow p-3 bg-white rounded"style="">
+                  <div class="card-body">
+                     <h5 class="card-title"><%=gossip.title %></h5>
+                     <h6 class="card-subtitle mb-2 text-muted">de<%=gossip.content%></h6>
+                     <a href="/gossips/<%=gossip.id%>"class="btn btn-primary">Lien vers le potin <%=gossip.id%></a>
+            <%# <p>contenu gossip </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> %>
+          
+                  </div>
+               </div>
+            </div>
+          </div>
+      <%end%>
+   </div>
+</div>
+          
 
 
+
+          <%# <div class="col-md-4">
+            <h2>Gossip</h2>
+            <p>contenu gossip </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Gossip</h2>
+            <p>contenu gossip</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div>
+        </div> %>
 
 <%# la boucle pour afficher les potins sur lapage d'acceuil %>
 
-<% Gossip.all.each do |gossip| %>
-<article>
-   <p><mark><%= gossip.user.first_name %></mark></p>
-   <p><b><%= gossip.title %></b></p>
-</article>
-<% end %>
+<%# <% Gossip.all.each do |gossip|%>
+<%# <article> %>
+   <%# <p><mark><%= gossip.user.first_name -- mettre le signe pourcentage et cloturer---</mark></p> %>
+   <%# <p><b><%= gossip.title --- mettre le signe pourcentage et cloturer--- </b></p> %>
+<%# </article> %>
+<%# <% end %>
