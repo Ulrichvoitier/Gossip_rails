@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   get '/team', to: 'team#team_section'
   get '/contact', to:'contact#contact_section'
+
+  # get '/inscription', to:'inscription#inscription_section'
+
+
   get '/welcome/:id', to: 'welcome#welcome_user'
 
   #afficher un potin par page
@@ -18,6 +22,8 @@ Rails.application.routes.draw do
   # get '/gossips/:id', to:'gossips#create'
 
   resources :gossips
+  resources :inscription
+  resources :sessions
 
   # get '/contact', to: '#contact'
   # get '/static_pages/contact', to: 'static_pages#contact'

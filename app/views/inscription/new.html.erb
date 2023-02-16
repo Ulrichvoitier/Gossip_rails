@@ -1,0 +1,43 @@
+<h1>Merci de vous connecter</h1>
+<p>Find me in app/views/inscription/inscription_section.html.erb</p>
+
+<html>
+  <body>
+
+    <%= form_tag url_for(action: 'create'), method: "post" do %>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <%= label_tag 'First_name' %>
+      <%= text_field_tag 'user[first_name]' %>
+      <br /> <br />
+
+      <%= label_tag 'Last_name' %>
+      <%= text_field_tag 'user[last_name]' %>
+      <br /> <br />
+
+      <%= label_tag 'Description' %>
+      <%= text_field_tag 'user[description]' %>
+      <br /> <br />
+
+      <%= label_tag 'Email' %>
+      <%= text_field_tag 'user[email]' %>
+      <br /> <br />
+
+      <%= label_tag 'Age' %>
+      <%= text_field_tag 'user[age]' %>
+      <br /> <br />
+
+      <%= label_tag 'City_id' %>
+      <%= text_field_tag 'user[city_id]' %>
+      <br /> <br />
+
+      <%= label_tag 'Password' %>
+      <%= text_area_tag 'user[password]' %>
+      <br /> <br />
+
+      <%= submit_tag "Connexion" %>
+
+    <% end %>
+
+  </body>
+</html>
